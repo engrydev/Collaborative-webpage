@@ -4,13 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet"/>
+    <link href="https://fonts.cdnfonts.com/css/gagalin" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 
-    <section>
-        <nav>
-            <img src="/images/flame-logo-png-30.png" alt="logo">
-            <div>Ghilan'z Pulutan</div>
+    <section class="section-container">
+        <nav class="nav-container" id="check">
+            <img src="/images/flame-logo-png-30.png" alt="logo" class="logo">
+            <div class="website-name">Ghilan'z Pulutan</div>
                 <ul>
                     <li><a>Home</a></li>
                     <li><a>Menu</a></li>
@@ -20,54 +23,64 @@
         </nav>
     </section>
 
-    <section>
-        <div>
-            <h4>Walang kapantay sa sarap!</h4>
+    <section class="front-container fade-in">
+        <div class="heading">
+            <h4 class="title">Walang kapantay sa sarap!</h4>
         </div>
-            <p>
+        <div class="show">
+            <p class="description">
                 Tikman ang bagong paborito ng barkada — sizzling, malasa, at lutong
                 pulutan na swak sa kahit anong okasyon. Gawa sa de-kalidad na sangkap at pusong
                 Pinoy, siguradong bawat kuha n'yo, panalo!
             </p>
-            <button id="order">
-                ORDER NOW
-            </button>
+        </div>
+        <button class="button-position" id="order">
+        ORDER NOW
+        </button>
     </section>
 
-    <section>
-        <div>
-            <p>
+    <section class="bestSeller-container fade-in">
+        <div class="heading">
+            <p class="title-bestSeller">
                 Our Bestsellers
             </p>
         </div>
-            <p>
+            <p class="description">
                 "Ano mang trip mong pulutan, siguradong meron sa Ghilan'z Pulutan! 
                 Tikman mo na at mapapa-ulit ka!"
             </p>
     </section>
 
-    <section>
+    <section class="menu-container fade-in">
         <ul>
-            <li><img src="/images/menu-crispypata.png" alt="menu1">
-                <button class="menu-button">ORDER NOW</button>
+            <li class="menu-item"><img src="/images/menu-crispypata.png" alt="menu1" id="menu1">
+                    <button class="menu-button">ORDER NOW</button>
             </li>
-            <li><img src="/images/menu-liempo.png" alt="menu2">
-                <button class="menu-button">ORDER NOW</button>
+            <li class="menu-item"><img src="/images/menu-liempo.png" alt="menu2" id="menu2">
+                    <button class="menu-button">ORDER NOW</button>
             </li>
-            <li><img src="/images/menu-grilledchicken.png" alt="menu3">
-                <button class="menu-button">ORDER NOW</button>
+            <li class="menu-item"><img src="/images/menu-grilledchicken.png" alt="menu3" id="menu3">
+                    <button class="menu-button">ORDER NOW</button>
             </li>
-            <li><img src="/images/menu-porksisig.png" alt="menu4">
-                <button class="menu-button">ORDER NOW</button>
+            <li class="menu-item"><img src="/images/menu-porksisig.png" alt="menu4" id="menu4">
+                    <button class="menu-button">ORDER NOW</button>
             </li>
         </ul>
     </section>
     
 </body>
 <script>
+    window.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('.fade-in').forEach(el => {
+      el.classList.add('show');
+      el.classList.add('slide')
+    });
+
     const link = document.getElementById('order').addEventListener('click', function(){
         window.location.href = 'https://www.facebook.com/people/Ghilanz-Pulutan/100063765949049/'
     })
+
+  });
 
 </script>
 </html>
