@@ -232,7 +232,52 @@ button:hover {
     transform: scale(1.05);
   }
 
+@media (max-width: 800px) {
+  a {
+    position: absolute;
+    width: 100%;
+    height: calc(80vh - 60px);
+    left: -100%;
+    background-color: var(--extra-light);
+    flex-direction: column;
+    justify-content: center;
+    gap: 3rem;
+  }
 
+  ul {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .menu-grid {
+    flex: 50%;
+    max-width: 50%;
+  }
+
+  ul li a .heading {
+    font-size: 1rem;
+  }
+
+  .section-container {
+    padding: 1rem 1rem 1rem 1rem;
+    text-align: center;
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .menu-container {
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(1, 1fr);
+    width: 70%;
+  }
+
+  .menu-button {
+    width: 50%;
+  }
+}
 
 
 
